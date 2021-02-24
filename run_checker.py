@@ -1,16 +1,16 @@
 import sys
-import scheduler
+import check_scheduler
 
 if __name__ == "__main__":
 
     if sys.argv[1] == "ps":
         print("Starting PS check")
-        scheduler.timer("ps")
+        check_scheduler.timer("ps")
     elif sys.argv[1] == "xbox":
         print("Starting XBOX check")
-        scheduler.timer("xbox")
+        check_scheduler.timer("xbox")
     elif sys.argv[1] == "both":
         print("Starting checks for PS and XBOX")
-        scheduler.timer("both")
+        check_scheduler.timer("both")
     else:
         print("unrecognised argument, choose either 'ps','xbox' or 'both'")
